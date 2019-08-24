@@ -1,0 +1,171 @@
+<!-- 此版本仅支持IE9以上浏览器，适配手机版 -->
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<meta charset="utf-8">
+		<title>打灰狼</title>
+		<link rel="shortcut icon" href="image/favicon.png">
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<script src="js/jquery-3.3.1.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<!-- 背景音乐 -->
+		<audio id="GameBGAudio" loop preload="auto">
+			<source src="audio/game_music.ogg" type="audio/ogg">
+			<source src="audio/game_music.mp3" type="audio/mpeg">
+		</audio>
+		<!-- 绘制场景盒子 -->
+		<div class="GameBoxBg">
+			<!-- <img class="d" id="newImg" src="" /> -->
+			<!-- 绘制头部 -->
+			<div class="GameHeader">
+				<div>
+					<!-- 分数盒子 -->
+					<div class="scoreBox">
+						<span class="scoreTitle"><strong>得分: </strong></span>
+						<strong><span class="scoreNum"> 0</span></strong>
+					</div>
+					<div class="ctBox">
+						<p>余额：<span id="ct"></span> CT</p>
+					</div>
+					<div class="lolgBox">
+						<img src="image/打灰太狼.png">
+					</div>
+				</div>
+				<div class="listBOx">
+					<!-- 分数盒子 -->
+					<div class="timeBox">
+						<strong><span class="timeNum">30</span> 秒</strong>
+					</div>
+				</div>
+			</div>
+			<!-- 右侧功能插件控件 -->
+			<div class="controlsBox">
+				<ul>
+					<!-- 背景音乐按钮 -->
+					<li class="musicBox">
+						<button type="button" id="musicBtn" class=""></button>
+					</li>
+					<li class="rankingBox">
+						<button type="button" class="btn_ranking" data-toggle="modal" data-target="#Gamelist"></button>
+						<p>榜单</p>
+					</li>
+				</ul>
+			</div>
+			<div class="startBox">
+				<button class="start">开始游戏</button>
+				<button type="button" class="btn_rules" data-toggle="modal" data-target="#exampleModalScrollable">
+					游戏规则
+				</button>
+			</div>
+
+			<div class="gameOverBox">
+				<h1 class="over">GAME OVER</h1>
+				<div class="settlementBox">
+					<p class="settlementTitle">您的得分：<span id="settlementNum">
+
+						</span></p>
+				</div>
+				<button class="restart">重新开始</button>
+				<button type="button" class="btn_rules" data-toggle="modal" data-target="#exampleModalScrollable">
+					游戏规则
+				</button>
+			</div>
+
+		</div>
+
+		<!-- 规则弹窗体 -->
+		<!-- Modal -->
+		<div class="modal fade gameRules" id="exampleModalScrollable" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle"
+		 aria-hidden="true">
+			<div class="modal-dialog modal-dialog-scrollable modal-dialog-centered" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5>游戏规则</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<ul>
+							<li>1、游戏每局消耗50CT。</li>
+							<li>2、每周会把玩家在游戏中消耗的90%的CT，放到奖金池。
+								<ul>
+									以下是前十名获得的奖池比例：
+									<li>第一名—30%</li>
+									<li>第二名—18%</li>
+									<li>第三名—12%</li>
+									<li>第四名—10%</li>
+									<li>第五名—8%</li>
+									<li>第六名—6%</li>
+									<li>第七名—5%</li>
+									<li>第八名—4%</li>
+									<li>第九名—4%</li>
+									<li>第十名—3%</li>
+									当周的奖励会在下周二22点前发放。
+								</ul>
+							</li>
+							<li>3、游戏时间:30s；拼手速,打到大灰狼+10分；
+								打到小灰灰-10分</li>
+						</ul>
+
+					</div>
+
+				</div>
+			</div>
+		</div>
+		<!-- 榜单弹窗 -->
+		<!-- Modal -->
+		<div class="modal fade gameRules" id="Gamelist" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle"
+		 aria-hidden="true">
+			<div class="modal-dialog modal-dialog-scrollable modal-dialog-centered" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5>当周排行榜</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<table class="table">
+							<thead class="table-light">
+								<tr>
+									<th scope="col">排名</th>
+									<th scope="col">账户</th>
+									<th scope="col">分数</th>
+									
+								</tr>
+							</thead>
+							<tbody id="tbodyBox">
+								<tr>
+									<th scope="row">1</th>
+									<td>Mark</td>
+									<td>Otto</td>
+									
+								</tr>
+								<tr>
+									<th scope="row">2</th>
+									<td>Jacob</td>
+									<td>Thornton</td>
+									
+								</tr>
+								<tr>
+									<th scope="row">3</th>
+									<td>Larry</td>
+									<td>the Bird</td>
+									
+								</tr>
+							</tbody>
+						</table>
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+		<script src="js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/mian.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>

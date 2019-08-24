@@ -1,0 +1,263 @@
+* {margin: 0;padding: 0;}
+
+ul {
+	list-style: none;
+}
+img{
+	/* outline: none;
+    border-style:none;
+    border-width:0;
+	background-color: transparent; */
+}
+button:focus{
+	outline: none
+}
+html,
+body,
+.GameBoxBg {
+	width: 100%;
+	height: 100%;
+}
+
+/* 重绘背景图片 */
+.GameBoxBg {
+	background-image: url(../image/GameBg.jpg);
+	background-position:left top;
+	background-size: 100% auto;
+	background-origin: content-box;
+	background-repeat: no-repeat;
+	position: relative;
+}
+
+.GameHeader {
+	width: 100%;
+	/* background: #9FCDFF; */
+	padding: 1rem 0.625rem 0.3125rem;
+}
+
+/* 分数盒子 */
+.scoreBox {
+	display: inline-block;
+	padding: 0.25rem 0.625rem;
+	border-radius: 2rem;
+	border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+	background-color: #da6344;
+	border: 0.0625rem solid #e7e7e7;
+	font-size: 0.75rem;
+	box-shadow: 0.0625rem 0.0625rem 0.0625rem rgba(0, 0, 0, 0.4);
+	
+}
+
+.scoreTitle {
+	color: #fff;
+	font-size: 0.75rem;
+	text-shadow: 0rem 0.0625rem 0.125rem 0.3125rem #e97c00;
+	font-weight: bold;
+}
+
+.scoreNum {
+	color: #fff500;
+	font-weight: bold;
+	/* text-shadow: 0.125rem 0.125rem 0px #6d1500; */
+}
+.ctBox{
+	display: inline-block;
+    padding: 0.25rem 0.625rem;
+    border-radius: 2rem;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    background-color: #db6244;
+    border: 0.0625rem solid #e7e7e7;
+    font-size: 0.75rem;
+	font-weight: bold;
+    box-shadow: 0.0625rem 0.0625rem 0.0625rem rgba(0, 0, 0, 0.4);
+}
+.ctBox p{
+	margin-bottom: 0;
+	color: #fff;
+    font-size: 0.75rem;
+}
+.ctBox p span{
+	color: #fff500;
+	font-weight: bold;
+	/* text-shadow: 0.125rem 0.125rem 0px #6d1500; */
+}
+.lolgBox {
+	float: right;
+	display: inline-block;
+	height: 3.125rem;
+	
+}
+.lolgBox img {
+	height: 100%;
+	width: auto;
+}
+
+.timeBox {
+	display: inline-block;
+	border-radius: 2rem;
+	padding-left: 0.625rem;
+	font-size: 0.875rem;
+	line-height: 1.5625rem;
+	color: #da6344;
+	margin-top: 0.25rem;
+}
+
+.timeNum {
+	color: #da6344;
+	font-weight: bold;
+	text-shadow: 0.125rem 0.125rem 0px #6d1500;
+	font-size: 1.5625rem;
+}
+
+/* 功能控件按钮 */
+.controlsBox {
+	position: absolute;
+	right: 0.625rem;
+	/* background: #0056B3; */
+}
+.controlsBoxLeft {
+	position: absolute;
+	left: 0.625rem;
+	/* background: #0056B3; */
+}
+.controlsBox ul {
+	list-style: none;
+	margin-bottom: 0rem;
+}
+
+.controlsBox ul li {
+	margin-bottom: 0.25rem;
+	text-align: center;
+}
+
+#musicBtn {
+	width: 2.5rem;
+	height: 2.5rem;
+	background-color: transparent;
+	background-image: url(../image/iconMis.png);
+	background-position: 0rem 0rem;
+	background-repeat: no-repeat;
+	background-clip: content-box;
+	background-size: 100% auto;
+	border: none;
+}
+
+#musicBtn:focus {
+	outline: none
+}
+/* 音乐切换图标 */
+.musicS {
+	background-position: 0rem -2.5rem !important;
+}
+.rankingBox p{
+	font-size: 0.75rem;
+	color: #FFFFFF;
+	margin-bottom:0;
+	line-height: 0.75rem;
+	margin-top: -0.125rem;
+}
+.btn_ranking{
+	width: 2.5rem;
+	height: 2.5rem;
+	background-color: transparent;
+	background-image: url(../image/ranking.png);
+	background-position: 0rem 0rem;
+	background-repeat: no-repeat;
+	background-clip: content-box;
+	background-size: 100% auto;
+	border: none;
+}
+/* gameRules游戏规则弹窗样式 */
+.gameRules {}
+.gameRules .modal-content .modal-header h5 {
+	margin-bottom: 0;
+	background: linear-gradient(-45deg, rgba(255, 162, 17, 1) 0%, rgba(255, 118, 66, 1) 100%);
+	background-clip: text;
+	-webkit-background-clip: text;
+	text-fill-color: transparent;
+	-webkit-text-fill-color: transparent;
+	font-weight: bold;
+}
+
+.close:focus{
+	outline:none
+}
+.start{
+	width: 15.625rem;
+    border: 0;
+    border-radius: 1.875rem;
+    background: linear-gradient(to top, #f9c000,#fae900);
+	box-shadow: 0rem 0.1875rem 0 0.125rem #ee9003;
+    margin: 0 auto;
+    font-size: 2.1875rem;
+	font-weight: bold;
+    position: absolute;
+    color: #d45200;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    top: 26.8125rem;
+}
+.restart {
+    width: 15.625rem;
+    border: 0;
+    border-radius: 1.875rem;
+	background: linear-gradient(#f5440b, #C50000);
+	box-shadow: 0rem 0.1875rem 0 0.125rem #771e04;
+    font-size: 2.1875rem;
+	font-weight: bold;
+    position: absolute;
+    color: #fff;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    top: 26.8125rem;
+}
+.over {
+    text-align: center;
+    position: absolute;
+    top: 15.6875rem;
+	margin: 0 auto;
+	left: 50%;
+	margin-left: -10.699375rem;
+    font-weight: bold;
+    font-size: 3.75rem;
+    text-shadow: 0.1875rem 0.1875rem 0  #fff;
+    background: -webkit-gradient(linear, 0 0, 0 bottom, from(rgba(255, 0, 0, 1)), to(rgba(0, 0, 213, 1)));
+	-webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+/* 被隐藏的内容 */
+.gameOverBox{
+	display: none;
+}
+.settlementBox{
+	text-align: center;
+	position: absolute;
+	top: 21.5rem;
+	width: 100%;
+	margin: 0 auto;
+	font-size: 1.5rem;
+	font-weight: bold;
+}
+.settlementTitle{
+	color: #fff;
+}
+#settlementNum{
+	
+}
+.btn_rules{
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 31.375rem;
+	margin: 0 auto;
+	border:none;
+	width: 4.2rem;
+	background: transparent;
+	font-size: 1rem;
+	color: #fff;
+	text-shadow: 0rem 0.125rem 0px #6d1500;
+}
